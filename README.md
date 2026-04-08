@@ -69,6 +69,8 @@ python rl_controler_big.py
 5. Запуск тестирования обученной модели
 bash
 python trained_rl.py --test
+
+
 📁 Структура проекта
 text
 OFFRoad_Net/
