@@ -1,0 +1,134 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/Tree1.proto"
+EXTERNPROTO "../protos/Tree2.proto"
+EXTERNPROTO "../protos/Road.proto"
+EXTERNPROTO "../protos/Road2.proto"
+EXTERNPROTO "../protos/Stone1.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5.proto"
+EXTERNPROTO "../protos/SwampArea.proto"
+EXTERNPROTO "../protos/SnowField.proto"
+
+WorldInfo {
+  contactProperties [
+    ContactProperties {
+      material1 "snow_material"
+      coulombFriction [
+        0.5, 0.5
+      ]
+      bounce 0
+      softCFM 0.01
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.20201438307588399 -0.8104877806147888 -0.5498179212290044 5.983227799213009
+  position -17.218437317249638 -6.40294395242992 5.553948548917809
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 0.05
+  rotation 0 0 0.9999999999999999 0.1898049999999995
+  floorSize 50 50
+  wallThickness 1.5
+  wallHeight 1.5
+}
+Tree1 {
+  translation 4.48897 12.6493 0.110017
+  rotation 0.8504397577008178 -0.37198989401618837 -0.3719888940164733 1.7321
+  name "tree(1)"
+  treeScale 1 1 1
+}
+Tree2 {
+  translation 8.67 6.47 0.0600138
+  rotation 1 0 0 1.5708
+  name "tree(3)"
+}
+Road {
+  translation 9.54667 -7.34944 0.06
+  rotation -0.6776620723211167 0.5199870554938015 0.5199880554939083 -1.950445307179586
+}
+Road {
+  translation 11.019 -17.4439 0.0599613
+  rotation -0.6776620723211167 0.5199870554938015 0.5199880554939083 -1.950445307179586
+  name "road(3)"
+}
+Road {
+  translation 6.67766 -8.11836 0.0599924
+  rotation -0.6776620723211167 0.5199870554938015 0.5199880554939083 -1.950445307179586
+  name "road(1)"
+}
+Road {
+  translation 3.81844 -8.88447 0.0599834
+  rotation -0.6776620723211167 0.5199870554938015 0.5199880554939083 -1.950445307179586
+  name "road(2)"
+}
+Road {
+  translation -3.66765 -3.55015 0.0599874
+  rotation 0.9831058216877231 0.1294259765251715 0.12942897652462734 1.58784
+  name "road(4)"
+}
+Road {
+  translation -4.43368 -0.69081 0.060005
+  rotation 0.9831058216877231 0.1294259765251715 0.12942897652462734 1.58784
+  name "road(5)"
+}
+Road {
+  translation -5.18668 2.12014 0.0600229
+  rotation 0.9831058216877231 0.1294259765251715 0.12942897652462734 1.58784
+  name "road(6)"
+}
+Road2 {
+  translation 15.6393 -7.17336 0.08
+  rotation 0.9831055672070398 0.12942794302188446 0.12942894302144423 1.58784
+  roadScale 1 1 1
+}
+Road2 {
+  translation 16.577 -15.9124 0.0799432
+  rotation -0.6776629654700234 0.5199859735043754 0.5199879735042735 -1.950445307179586
+  name "road2(1)"
+  roadScale 1 1 1
+}
+Road2 {
+  translation -2.22842 -9.05834 0.0799616
+  rotation 0.09269260343371598 -0.7040610260813216 -0.7040640260814327 2.95674
+  name "road2(2)"
+  roadScale 1 1 1
+}
+Stone1 {
+  translation 12.99 5.59 0.25
+}
+DEF CAR BmwX5 {
+  hidden position_0_0 -7.707657112905477e-06
+  hidden position2_0_0 254.0120270004807
+  hidden position_0_1 -2.3077058384995887e-05
+  hidden position2_0_1 254.03603669583242
+  hidden position_0_2 64.14869252175677
+  hidden position_0_3 59.36078895423865
+  hidden rotation_1 3.8538285564416515e-06 -0.9999999999921724 8.96208045193214e-07 2.6846147133007086
+  hidden rotation_2 -1.1538529192204755e-05 0.9999999999302113 2.5376758245663176e-06 2.708624408678244
+  hidden rotation_3 0 -0.9999999999999999 0 1.3168394499609068
+  hidden rotation_4 0 -1 0 3.471064117557215
+  translation -5.136168308520036 1.9642576958833318 0.3913947131529195
+  rotation 0.013920090128395981 -0.017585547376269797 -0.999748458170501 1.3301258555555984
+  controller "keyboard_control"
+  supervisor TRUE
+}
+SwampArea {
+  translation 4.9 1.55 0.19
+}
+Stone1 {
+  translation 12.59 0 0
+  name "stone(1)"
+}
+SnowField {
+  translation -3.60766 -4.57698 -0.42633
+  rotation 0 0 1 0.261799
+  name "snow_field_1"
+}

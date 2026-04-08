@@ -1,0 +1,118 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/range_rover/RangeRoverSportSVR.proto"
+
+WorldInfo {
+  title "Training World"
+}
+Viewpoint {
+  orientation -0.21304434090539573 0.3808724794066117 0.8997490001321734 1.1124210934604901
+  position -15.583184314852833 -18.884126510636122 11.901290470395839
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 30 30
+  floorTileSize 1 1
+  wallThickness 0.5
+  wallHeight 1
+}
+DEF CAR RangeRoverSportSVR {
+  hidden position_0_0 -0.04683823188399491
+  hidden position2_0_0 576.8208249869325
+  hidden position_0_1 0.04727386249198373
+  hidden position2_0_1 563.424494331594
+  hidden position_0_2 553.3177052218919
+  hidden position_0_3 537.6550315966884
+  hidden rotation_1 -0.023404179338624178 0.9991794962342764 0.03305417817013569 1.2329976201589983
+  hidden rotation_2 -0.023632361918016143 -0.9996204811465629 -0.01415645232711992 2.062517962005551
+  hidden rotation_3 0 -1 0 0.3973981900882459
+  hidden rotation_4 0 -1 0 2.6989048207559914
+  translation -12.1064 1.06176 0.372317
+  rotation -0.2542726265061819 0.9241897823088217 -0.284988908004541 0.060299451161461466
+  name "car"
+  controller "rl_hybrid_controller"
+  supervisor TRUE
+  sensorsSlotRear [
+    InertialUnit {
+      name "imu"
+    }
+    Compass {
+      translation -2.77 0 0
+    }
+    GPS {
+      translation -2.41 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Lidar {
+      translation 1.79 0.98 -0.99
+      rotation 0 0 -1 -1.8326
+      name "lidar_left"
+      horizontalResolution 360
+      fieldOfView 3.14159
+      numberOfLayers 1
+      minRange 0.1
+      maxRange 30
+    }
+    Lidar {
+      translation 1.79 -0.9 -0.99
+      rotation 0 0 1 -1.5708
+      name "lidar_right"
+      horizontalResolution 360
+      fieldOfView 3.14159
+      numberOfLayers 1
+      minRange 0.1
+      maxRange 30
+    }
+    Lidar {
+      translation 2.24 0 -0.99
+      name "lidar_front"
+      horizontalResolution 360
+      fieldOfView 3.14159
+      numberOfLayers 1
+      minRange 0.1
+      maxRange 30
+    }
+  ]
+}
+DEF TRAINING_OBSTACLE Solid {
+  translation 0 1 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 0.5
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle"
+  boundingObject Box {
+  }
+}
+DEF GOAL Solid {
+  translation 10 0.5 0.31
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        transparency 0.3
+        emissiveColor 0 0.5 0
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "goal"
+  boundingObject Box {
+    size 1 1 1
+  }
+}

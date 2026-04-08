@@ -1,0 +1,30 @@
+#VRML_SIM R2023b utf8
+PROTO Tree2 [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 0 1 0
+  field SFString   name        "tree2"
+  field SFVec3f    treeScale   1 1 1
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    
+    children [
+      Transform {
+        scale IS treeScale
+        children [
+          CadShape {
+            url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Tree2.obj" ]
+          }
+        ]
+      }
+    ]
+    
+    # boundingObject без Transform - Mesh напрямую
+    boundingObject Mesh {
+      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Tree2.obj" ]
+    }
+  }
+}

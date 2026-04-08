@@ -1,0 +1,29 @@
+#VRML_SIM R2025a utf8
+PROTO SwampArea [
+  field SFVec3f    translation 0 0 0
+  field SFVec2f    size        5 5          # Размер области
+  field SFColor    color       0.5 0.5 0.8   # Синеватый цвет для болота
+]
+{
+  Solid {
+    translation IS translation
+    name "swamp_area"
+    children [
+      Shape {
+        appearance PBRAppearance {
+          baseColor IS color
+          transparency 0.3      # Полупрозрачная, чтобы видеть под ней
+          roughness 0.9
+        }
+        geometry Plane {
+          size IS size
+        }
+      }
+    ]
+    boundingObject Plane {
+      size IS size
+    }
+    # ВАЖНО: У этой поверхности будет специальный материал
+    recognitionColors [ 0.5 0.5 0.8 ]
+  }
+}

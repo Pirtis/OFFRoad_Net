@@ -1,0 +1,53 @@
+# Виртуальные окружения
+venv/
+**/venv/
+**/venv/**
+**/webots_rl_env/
+**/webots_rl_env/**
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Большие бинарные файлы
+*.pyd
+*.dll
+*.lib
+*.exe
+*.so
+*.dylib
+
+# Логи и модели
+logs/
+*.log
+*.zip
+*.pkl
+models/
+**/logs/
+**/models/
+
+# Webots
+*.wbt.bak
+*.proto.bak
+*.cache
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Дополнительно для вашего проекта
+PPO/computer_vision_project/  # если не используется
+*.tmp
+*.bak

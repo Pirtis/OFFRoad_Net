@@ -1,0 +1,117 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/bmw/BmwX5.proto"
+
+WorldInfo {
+  title "Training World"
+  CFM 0.0003
+  ERP 0.4
+  lineScale 0.2
+  contactProperties [
+    ContactProperties {
+      softCFM 1e-05
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.25555511354029004 -0.48016528302243067 -0.8391262628016111 5.1527260179990035
+  position -18.911430915547257 -28.859463383624703 23.930202992557735
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 30 30
+  floorTileSize 2 2
+  wallThickness 0.5
+  wallHeight 1
+}
+DEF TARGET Solid {
+  translation 0.5884739003813699 0.18139298455820096 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        transparency 0.3
+        emissiveColor 0 0.5 0
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "target"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+DEF CAR BmwX5 {
+  hidden position_0_0 0.13658822979620583
+  hidden position2_0_0 4183.396691280527
+  hidden position_0_1 0.1657176505037563
+  hidden position2_0_1 4482.767341185361
+  hidden position_0_2 1263.8253037894315
+  hidden position_0_3 1400.4322919199396
+  hidden position_0_8 1.2356383648514748
+  hidden position_0_9 0.0015238075338959108
+  hidden rotation_1 0.06790743634803746 0.9927916663064739 -0.09875873329003543 1.2114870903195267
+  hidden rotation_2 -0.08275819555167013 -0.9964987324385007 0.011889378347613506 3.4259824021067313
+  hidden rotation_3 0 1 0 5.378128260844996
+  hidden rotation_4 0 0.9999999999999999 0 5.565153726071446
+  hidden rotation_25 0 -0.3205961743168832 0.9472159695726096 1.2356383648514748
+  hidden translation_26 -0.0005189759196233545 0.003021549630980891 -0.0005825239914163394
+  hidden rotation_26 0.7466598432279095 0 -0.6652060421485011 0.0015238075338711268
+  translation -11.472783410278556 0.5159466967000482 -0.02979541170890003
+  rotation -0.01548237243493047 -0.9992474715289382 -0.035563841001922836 0.02203093148547301
+  controller "trained_rl_random(1-4)"
+  supervisor TRUE
+  sensorsSlotRear [
+    InertialUnit {
+      translation -4.96 0 0
+      rotation 0 0 1 3.14159
+      name "imu"
+    }
+    Compass {
+      translation -2.77 0 0
+    }
+    GPS {
+      translation -2.41 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Lidar {
+      translation 2.83 -0.0100226 -0.8
+      rotation 0 0 1 -5.307179586466759e-06
+      name "lidar_front"
+      horizontalResolution 180
+      fieldOfView 2
+      numberOfLayers 1
+      maxRange 20
+      noise 0.01
+    }
+    Lidar {
+      translation 2.36803 0.921292 -0.81
+      rotation 9.58982e-09 -9.59746e-09 1 1.56999
+      name "lidar_left"
+      horizontalResolution 90
+      fieldOfView 1.57
+      numberOfLayers 1
+      maxRange 10
+      noise 0.01
+    }
+    Lidar {
+      translation 2.34247 -1.00868 -0.75
+      rotation 0 0 -1 1.57
+      name "lidar_right"
+      horizontalResolution 90
+      fieldOfView 1.57
+      numberOfLayers 1
+      maxRange 10
+      noise 0.01
+    }
+  ]
+}

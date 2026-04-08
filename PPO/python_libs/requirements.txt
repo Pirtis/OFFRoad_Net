@@ -1,0 +1,8 @@
+# Библиотеки для RL обучения
+stable-baselines3>=2.0.0
+gymnasium>=0.28.0
+torch>=2.0.0
+numpy>=1.24.0
+tensorboard>=2.13.0
+matplotlib>=3.7.0
+pandas>=2.0.0

@@ -1,0 +1,370 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/bmw/BmwX5.proto"
+
+WorldInfo {
+  title "Training World"
+  CFM 0.0003
+  ERP 0.4
+  lineScale 0.2
+  contactProperties [
+    ContactProperties {
+      softCFM 1e-05
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.2950310924476781 -0.6995832091395888 -0.6507994990617955 5.133236368926145
+  position -37.21197309779062 -40.20887225618834 59.6904071961103
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 50 50
+  floorTileSize 2 2
+  wallThickness 0.5
+  wallHeight 1
+}
+DEF OBSTACLE Solid {
+  translation 0.747674 -5.89903 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 8.72767 -10.559 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(13)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 1.48767 5.50097 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(7)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 18.0977 18.731 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(15)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 16.4777 6.321 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(8)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 17.7877 -16.399 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(4)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation -8.8723 -4.41903 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(3)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation -10.7223 7.09097 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(10)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation -19.0723 -14.089 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(9)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation -9.83233 -15.779 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(2)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 1.33767 -18.829 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(5)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 20.7377 -6.539 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(14)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation -4.91233 16.731 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(1)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation 8.11767 14.551 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(16)"
+  boundingObject Box {
+  }
+}
+DEF OBSTACLE Solid {
+  translation -19.8323 10.681 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+      }
+      geometry Box {
+      }
+    }
+  ]
+  name "obstacle(12)"
+  boundingObject Box {
+  }
+}
+DEF TARGET Solid {
+  translation 21.5226 0.17089 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        transparency 0.3
+        emissiveColor 0 0.5 0
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "target"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+DEF CAR BmwX5 {
+  hidden position_0_0 -1.3090294559495362e-11
+  hidden position2_0_0 4183.058591873507
+  hidden position_0_1 -4.599627241161375e-10
+  hidden position2_0_1 4482.470118557821
+  hidden position_0_2 1263.7266679563822
+  hidden position_0_3 1400.3740157722088
+  hidden position_0_9 0.0041073783918562
+  hidden rotation_1 -6.545147279747681e-12 1 6.730848207305034e-12 1.542822708097709
+  hidden rotation_2 2.2998136205806877e-10 -1 -6.895486900901763e-11 3.724190768404175
+  hidden rotation_3 0 1 0 5.476764093894224
+  hidden rotation_4 0 1 0 5.506877578340651
+  hidden translation_26 -0.0013918837235431525 0.008147202969823186 -0.0015623184652086008
+  hidden rotation_26 0.7466598432279095 0 -0.6652060421485011 0.004107378391908183
+  translation -20.978779048562263 0.49117176209473995 0.3136970687210683
+  rotation 0.0010954043091574535 -0.8860401388543727 0.46360723940456683 0.005344990142602784
+  controller "rl_controler_big"
+  supervisor TRUE
+  sensorsSlotRear [
+    InertialUnit {
+      translation -4.96 0 0
+      rotation 0 0 1 3.14159
+      name "imu"
+    }
+    Compass {
+      translation -2.77 0 0
+    }
+    GPS {
+      translation -2.41 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Lidar {
+      translation 2.83 -0.0100226 -0.8
+      rotation 0 0 1 -5.307179586466759e-06
+      name "lidar_front"
+      horizontalResolution 180
+      fieldOfView 2
+      numberOfLayers 1
+      maxRange 20
+      noise 0.01
+    }
+    Lidar {
+      translation 2.36803 0.921292 -0.81
+      rotation 9.58982e-09 -9.59746e-09 1 1.56999
+      name "lidar_left"
+      horizontalResolution 90
+      fieldOfView 1.57
+      numberOfLayers 1
+      maxRange 10
+      noise 0.01
+    }
+    Lidar {
+      translation 2.34247 -1.00868 -0.75
+      rotation 0 0 -1 1.57
+      name "lidar_right"
+      horizontalResolution 90
+      fieldOfView 1.57
+      numberOfLayers 1
+      maxRange 10
+      noise 0.01
+    }
+  ]
+}

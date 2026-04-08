@@ -1,0 +1,44 @@
+#VRML_SIM R2023b utf8
+PROTO Road [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 0 1 0
+  field SFString   name        "road"
+  field SFVec3f    roadScale   1 1 1   # Масштаб по всем осям
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    
+    children [
+      Transform {
+        translation 0 0 0
+        scale IS roadScale  # Теперь масштаб применяется
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColorMap ImageTexture {
+                url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/dirtroad.jpg" ]
+              }
+              textureTransform TextureTransform {
+                scale 3 3
+                translation 1.1 1
+              }
+              roughness 0.9
+              metalness 0.0
+            }
+            geometry Mesh {
+              url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Road.obj" ]
+            }
+          }
+        ]
+      }
+    ]
+    
+    # А здесь проблема - boundingObject не масштабируется
+    boundingObject Mesh {
+      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Road.obj" ]
+    }
+  }
+}

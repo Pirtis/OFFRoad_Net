@@ -1,0 +1,44 @@
+#VRML_SIM R2025a utf8
+# license: Creative Commons Attribution 4.0 International
+# Модель снежного поля, замедляющего машину
+
+PROTO SnowField [
+  field SFVec3f translation 0 0 0.05
+  field SFRotation rotation 0 0 1 0
+  field SFString name "snow_field"
+  field SFFloat sizeX 4.0
+  field SFFloat sizeY 4.0
+  field SFFloat sizeZ 4.0
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Shape {
+        appearance PBRAppearance {
+          baseColor 1 1 1
+          roughness 0.9
+          metalness 0
+          transparency 0.2
+        }
+        geometry Box {
+          size IS sizeX
+          size IS sizeY
+          size IS sizeZ
+        }
+      }
+    ]
+    name IS name
+    contactMaterial "snow_material"
+    boundingObject Box {
+      size IS sizeX
+      size IS sizeY
+      size IS sizeZ
+    }
+    # Убираем physics - объект становится статичным
+    # physics Physics {
+    #   density 1000
+    # }
+  }
+}

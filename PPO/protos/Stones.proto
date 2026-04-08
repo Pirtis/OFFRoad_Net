@@ -1,0 +1,29 @@
+#VRML_SIM R2023b utf8
+PROTO Stones [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 0 1 0
+  field SFString   name        "stone"
+  field SFVec3f    stoneScale  1 1 1  
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    
+    children [
+      Transform {
+        scale IS stoneScale
+        children [
+          CadShape {
+            url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Stones.obj" ]
+          }
+        ]
+      }
+    ]
+    
+    boundingObject Mesh {
+      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Stones.obj" ]
+    }
+  }
+}

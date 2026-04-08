@@ -1,0 +1,80 @@
+#VRML_SIM R2023b utf8
+# Простой холмистый ландшафт с возможностью масштабирования
+
+PROTO HillyTerrain [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 1 0 0
+  field SFString   name        "hilly terrain"
+  field SFVec3f    scale       1 1 1        # Масштаб объекта
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    
+    children [
+      Transform {
+        scale IS scale  # Применяем масштаб ко всем детям
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.4 0.7 0.3
+              roughness 0.8
+            }
+            geometry ElevationGrid {
+              xDimension 10
+              xSpacing 2
+              yDimension 10
+              ySpacing 2
+              height [
+                # Создаем несколько холмов
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0.5, 1.0, 1.5, 2.0, 2.0, 1.5, 1.0, 0.5, 0,
+                0, 1.0, 2.0, 2.5, 3.0, 3.0, 2.5, 2.0, 1.0, 0,
+                0, 1.5, 2.5, 3.0, 3.5, 3.5, 3.0, 2.5, 1.5, 0,
+                0, 2.0, 3.0, 3.5, 4.0, 4.0, 3.5, 3.0, 2.0, 0,
+                0, 2.0, 3.0, 3.5, 4.0, 4.0, 3.5, 3.0, 2.0, 0,
+                0, 1.5, 2.5, 3.0, 3.5, 3.5, 3.0, 2.5, 1.5, 0,
+                0, 1.0, 2.0, 2.5, 3.0, 3.0, 2.5, 2.0, 1.0, 0,
+                0, 0.5, 1.0, 1.5, 2.0, 2.0, 1.5, 1.0, 0.5, 0,
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+              ]
+            }
+          }
+        ]
+      }
+    ]
+    
+    # boundingObject тоже нужно масштабировать
+    boundingObject Transform {
+      scale IS scale
+      children [
+        ElevationGrid {
+          xDimension 10
+          xSpacing 2
+          yDimension 10
+          ySpacing 2
+          height [
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0.5, 1.0, 1.5, 2.0, 2.0, 1.5, 1.0, 0.5, 0,
+                0, 1.0, 2.0, 2.5, 3.0, 3.0, 2.5, 2.0, 1.0, 0,
+                0, 1.5, 2.5, 3.0, 3.5, 3.5, 3.0, 2.5, 1.5, 0,
+                0, 2.0, 3.0, 3.5, 4.0, 4.0, 3.5, 3.0, 2.0, 0,
+                0, 2.0, 3.0, 3.5, 4.0, 4.0, 3.5, 3.0, 2.0, 0,
+                0, 1.5, 2.5, 3.0, 3.5, 3.5, 3.0, 2.5, 1.5, 0,
+                0, 1.0, 2.0, 2.5, 3.0, 3.0, 2.5, 2.0, 1.0, 0,
+                0, 0.5, 1.0, 1.5, 2.0, 2.0, 1.5, 1.0, 0.5, 0,
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+          ]
+          thickness 0.2
+        }
+      ]
+    }
+    
+    physics Physics {
+      density -1
+      mass 1000000
+    }
+  }
+}

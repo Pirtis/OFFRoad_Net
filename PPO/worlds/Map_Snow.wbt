@@ -1,0 +1,301 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/bmw/BmwX5.proto"
+EXTERNPROTO "../protos/Map_Snow.proto"
+EXTERNPROTO "../protos/Tree1.proto"
+EXTERNPROTO "../protos/Tree2.proto"
+EXTERNPROTO "../protos/Stone1.proto"
+EXTERNPROTO "../protos/Stones.proto"
+
+WorldInfo {
+  contactProperties [
+    ContactProperties {
+      softCFM 1e-08
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.21770757060931054 0.41225722459502046 0.8846736090042492 1.1362860865010804
+  position -43.84086109159924 -71.13719059793054 45.84354483494977
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Map_Snow {
+  rotation -1 -9.58979e-09 9.58976e-09 -1.5707953071795862
+}
+DEF TARGET Solid {
+  translation 37.04 0.5 0.84
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        transparency 0.3
+        emissiveColor 0 0.5 0
+      }
+      geometry Box {
+        size 1 1 1
+      }
+    }
+  ]
+  name "target"
+  boundingObject Box {
+    size 1 1 1
+  }
+}
+DEF CAR BmwX5 {
+  hidden position_0_0 0.07202406657935204
+  hidden position2_0_0 1.6097852137628121
+  hidden position_0_1 0.10341762224873342
+  hidden position2_0_1 1.6224560100451246
+  hidden position_0_2 2.1139419280971117
+  hidden position_0_3 2.2015855791538494
+  hidden position_0_8 -1.2993318369984623
+  hidden position_0_9 0.01604723922948118
+  hidden rotation_1 -0.03598268411978798 -0.9987530438069403 -0.03460641457746933 1.6110319691700483
+  hidden rotation_2 0.0516236257409372 0.9974626370096109 -0.049023351937551106 1.6249930391496652
+  hidden rotation_3 0 -1 0 2.1139419280971117
+  hidden rotation_4 0 1 0 2.2015855791538494
+  hidden rotation_25 0 0.3205961743168832 -0.9472159695726096 1.2993318369984626
+  hidden translation_26 -0.005311436093669464 0.03187846687289858 -0.005961816023507427
+  hidden rotation_26 0.7466598432279095 0 -0.6652060421485011 0.01604723922948565
+  translation -33.1187 -6.39584 0.585059
+  rotation -0.016149572983798717 -0.8510492391306234 0.5248374832913787 0.007358486181106109
+  controller "rl_controler_v1"
+  supervisor TRUE
+  sensorsSlotRear [
+    InertialUnit {
+      translation -4.96 0 0
+      rotation 0 0 1 3.14159
+      name "imu"
+    }
+    Compass {
+      translation -2.77 0 0
+    }
+    GPS {
+      translation -2.41 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Lidar {
+      translation 2.83 -0.0100226 -0.8
+      rotation 0 0 -1 5.30716e-06
+      name "lidar_front"
+      horizontalResolution 180
+      fieldOfView 2
+      numberOfLayers 1
+      maxRange 20
+      noise 0.01
+    }
+    Lidar {
+      translation -1.64969 1.07293 -0.81
+      rotation -2.31704e-08 9.60828e-09 -1 -0.7845953071795861
+      name "lidar_left"
+      horizontalResolution 180
+      fieldOfView 1.57
+      numberOfLayers 1
+      maxRange 20
+      noise 0.01
+    }
+    Lidar {
+      translation -1.79925 -1.00935 -0.75
+      rotation 0 0 -1 0.784602
+      name "lidar_right"
+      horizontalResolution 180
+      fieldOfView 1.57
+      numberOfLayers 1
+      maxRange 20
+      noise 0.01
+    }
+  ]
+}
+Tree1 {
+  translation 0 19.88 0.430053
+  rotation 1 0 0 1.5708
+}
+Tree1 {
+  translation -12.07 30.3 0.43009
+  rotation 1 0 0 1.5708
+  name "tree(7)"
+}
+Tree1 {
+  translation -18.68 -25.87 0.429899
+  rotation 1 0 0 1.5708
+  name "tree(6)"
+}
+Tree1 {
+  translation -18.68 36.65 0.430128
+  rotation 1 0 0 1.5708
+  name "tree(9)"
+}
+Tree1 {
+  translation 14.15 9.4 0.430017
+  rotation 1 0 0 1.5708
+  name "tree(1)"
+}
+Tree1 {
+  translation 17.46 -9.55 0.429965
+  rotation 1 0 0 1.5708
+  name "tree(4)"
+}
+Tree1 {
+  translation 9.29 -24.04 0.429908
+  rotation 1 0 0 1.5708
+  name "tree(5)"
+}
+Tree1 {
+  translation 24.31 -24.04 0.429908
+  rotation 1 0 0 1.5708
+  name "tree(8)"
+}
+Tree1 {
+  translation 35.42 9.4 0.430017
+  rotation 1 0 0 1.5708
+  name "tree(3)"
+}
+Tree1 {
+  translation -26.74 9.4 0.430017
+  rotation 1 0 0 1.5708
+  name "tree(2)"
+}
+Tree2 {
+  translation -1.12 -13.71 0.08
+  rotation 1 0 0 1.5708
+}
+Tree2 {
+  translation 6.96 -3.63 0.0800376
+  rotation 1 0 0 1.5708
+  name "tree2(7)"
+}
+Tree2 {
+  translation 13.36 -30.67 0.0799377
+  rotation 1 0 0 1.5708
+  name "tree2(6)"
+}
+Tree2 {
+  translation 32.88 -19.32 0.0799792
+  rotation 1 0 0 1.5708
+  name "tree2(8)"
+}
+Tree2 {
+  translation 4.17 9.63 0.080085
+  rotation 1 0 0 1.5708
+  name "tree2(5)"
+}
+Tree2 {
+  translation 26.61 -8.05 0.0800209
+  rotation 1 0 0 1.5708
+  name "tree2(4)"
+}
+Tree2 {
+  translation 23.09 30.69 0.0801632
+  rotation 1 0 0 1.5708
+  name "tree2(3)"
+}
+Tree2 {
+  translation -18.11 -13.71 0.08
+  rotation 1 0 0 1.5708
+  name "tree2(1)"
+}
+Tree2 {
+  translation -7.79 25.58 0.080145
+  rotation 1 0 0 1.5708
+  name "tree2(2)"
+}
+Tree2 {
+  translation -17.98 -38.34 0.0799097
+  rotation 1 0 0 1.5708
+  name "tree2(10)"
+}
+Tree2 {
+  translation 27.63 13.23 0.0800992
+  rotation 1 0 0 1.5708
+  name "tree2(9)"
+}
+Stone1 {
+  translation -8.54 -9.41 6.74634e-14
+  rotation 1 0 0 1.5708
+}
+Stone1 {
+  translation 0.16 2.87 4.51074e-05
+  rotation 1 0 0 1.5708
+  name "stone(7)"
+}
+Stone1 {
+  translation 15.12 -10.59 -4.33436e-06
+  rotation 1 0 0 1.5708
+  name "stone(6)"
+}
+Stone1 {
+  translation -2.6 14.7 8.85615e-05
+  rotation 1 0 0 1.5708
+  name "stone(2)"
+}
+Stone1 {
+  translation 14.01 40.56 0.000183565
+  rotation 1 0 0 1.5708
+  name "stone(16)"
+}
+Stone1 {
+  translation -15.48 10.21 7.20694e-05
+  rotation 1 0 0 1.5708
+  name "stone(4)"
+}
+Stone1 {
+  translation 23.8 17.85 0.000100134
+  rotation 1 0 0 1.5708
+  name "stone(14)"
+}
+Stone1 {
+  translation -9.08 19.73 0.000107039
+  rotation 1 0 0 1.5708
+  name "stone(11)"
+}
+Stone1 {
+  translation -22.05 -28.96 -7.18111e-05
+  rotation 1 0 0 1.5708
+  name "stone(9)"
+}
+Stones {
+  translation 0 -19.91 0.289965
+  rotation 1 0 0 1.5708
+  name "stone(1)"
+}
+Stones {
+  translation 5.55 -39.05 0.2899
+  rotation 1 0 0 1.5708
+  name "stone(15)"
+}
+Stones {
+  translation -12.02 -24.4 0.289954
+  rotation 1 0 0 1.5708
+  name "stone(8)"
+}
+Stones {
+  translation -30.26 15.56 0.290071
+  rotation 1 0 0 1.5708
+  name "stone(5)"
+}
+Stones {
+  translation -20.11 25.5 0.290134
+  rotation 1 0 0 1.5708
+  name "stone(10)"
+}
+Stones {
+  translation 11.22 21.22 0.29013
+  rotation 1 0 0 1.5708
+  name "stone(13)"
+}
+Stones {
+  translation 18.49 -13.03 0.29
+  rotation 1 0 0 1.5708
+  name "stone(3)"
+}
+Stones {
+  translation 25.24 -0.16 0.290042
+  rotation 1 0 0 1.5708
+  name "stone(12)"
+}

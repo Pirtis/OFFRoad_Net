@@ -1,0 +1,39 @@
+train/ (автоматически от PPO)
+
+train/entropy_loss - потеря энтропии (исследование)
+
+train/policy_loss - потеря политики
+
+train/value_loss - потеря функции ценности
+
+train/approx_kl - KL-дивергенция
+
+train/clip_fraction - доля обрезанных обновлений
+
+train/explained_variance - объяснённая дисперсия
+
+rollout/ (наши метрики)
+
+rollout/ep_rew_mean - средняя награда
+
+rollout/ep_len_mean - средняя длина эпизода
+
+rollout/ep_rew_max - максимальная награда
+
+rollout/ep_rew_min - минимальная награда
+
+stats/ (наши метрики успеха)
+
+stats/success_rate - процент успехов
+
+stats/collision_rate - процент столкновений
+
+stats/timeout_rate - процент таймаутов
+
+terminal/ (причины завершения)
+
+terminal/goal - достижения цели
+
+terminal/collision - столкновения
+
+terminal/timeout - таймауты

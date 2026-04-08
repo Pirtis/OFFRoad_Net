@@ -1,0 +1,80 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/Tree1.proto"
+EXTERNPROTO "../protos/Tree2.proto"
+EXTERNPROTO "../protos/Road.proto"
+EXTERNPROTO "../protos/Road2.proto"
+EXTERNPROTO "../protos/Stone1.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/bmw/BmwX5.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.38866509995477505 -0.5037684686251933 0.7714640432944184 4.981166977105492
+  position -3.905872817767712 1.10116388258311 8.847034340044448
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 0.05
+  rotation 0 0 0.9999999999999999 0.1898049999999995
+  floorSize 18 18
+}
+Tree1 {
+  translation -2.7 6 0.11
+  rotation 0.8504397577008178 -0.37198989401618837 -0.3719888940164733 1.7321
+  name "tree(1)"
+  treeScale 1 1 1
+}
+Tree2 {
+  translation 4 3 0.0600016
+  rotation 1 0 0 1.5708
+  name "tree(3)"
+  treeScale 0.4 0.4 0.4
+}
+Road {
+  translation -0.82164 -3.65735 1.81
+  rotation -0.6776620723211167 0.5199870554938015 0.5199880554939083 -1.950445307179586
+  visualScale 2 1 1
+  collisionScale 4 1 1
+}
+Road2 {
+  translation 5.33604 -4.07421 2.21
+  rotation 0.9831055672070398 0.12942794302188446 0.12942894302144423 1.58784
+  roadScale 1 1 1
+}
+Stone1 {
+  translation 2.39 5.59 0.25
+}
+BmwX5 {
+  hidden position_0_0 1.858587111942777e-05
+  hidden position2_0_0 -1.2840027308470425e-06
+  hidden position_0_1 1.8810818884977403e-05
+  hidden position2_0_1 -5.018247397488365e-06
+  hidden position_0_2 0.21625353525101265
+  hidden position_0_3 0.15134536062151183
+  hidden linearVelocity_0 0.08452815411800879 0.0013590365235929237 -1.0109851693934215
+  hidden angularVelocity_0 -0.004974742898914613 0.07758612506466493 -0.009795744275030818
+  hidden rotation_1 6.404747810103017e-07 0.06892060930330868 -0.9976221477156823 1.8630170450947152e-05
+  hidden linearVelocity_1 0.027988381847442192 -0.014975669614686691 -1.1109891109053818
+  hidden angularVelocity_1 -0.0049165704299800345 0.07769699066728726 -0.009640706249031763
+  hidden rotation_2 -2.4243378692099213e-06 -0.25775995016086684 -0.9662089877905246 1.946867361767621e-05
+  hidden linearVelocity_2 0.015829233736841246 -0.01836036977354899 -1.1316799924716583
+  hidden angularVelocity_2 -0.004916571410100949 0.0776969941308876 -0.009640706248450618
+  hidden rotation_3 0 -1 0 0.21625353525101357
+  hidden linearVelocity_3 0.13036282999995713 0.01800995592632802 -0.90115465885366
+  hidden angularVelocity_3 0.010219355190816983 0.011061762640781864 -0.007844647218860685
+  hidden rotation_4 0 1 0 0.15134536062151063
+  hidden linearVelocity_4 0.11820368188935389 0.014625255767473512 -0.9218455404199452
+  hidden angularVelocity_4 0.010219505333110264 0.011061829936381317 -0.007844730527090761
+  translation -1.5291774788158827 -4.612693112312356 3.8054829376734935
+  rotation -0.1549933253043626 0.8990366669502325 0.4095242857146727 0.5211537019505599
+}
+Stone1 {
+  name "stone(1)"
+}

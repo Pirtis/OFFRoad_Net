@@ -1,0 +1,30 @@
+#VRML_SIM R2023b utf8
+PROTO Map_Snow [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 0 1 0
+  field SFString   name        "Map_snow"
+  field SFVec3f    mapScale    1 1 1
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    
+    children [
+      Transform {
+        scale IS mapScale                    
+        children [
+          CadShape {
+            url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Map_Snow.obj" ]
+          }
+        ]
+      }
+    ]
+    
+    # ИСПРАВЛЕНО: Используем Mesh напрямую (без Transform и Group)
+    boundingObject Mesh {
+      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Map_Snow.obj" ]
+    }
+  }
+}

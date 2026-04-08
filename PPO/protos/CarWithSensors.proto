@@ -1,0 +1,71 @@
+#VRML_SIM R2025a utf8
+# машина с тремя лидарами и сенсорами на основе BmwX5
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/bmw/BmwX5.proto"
+
+PROTO CarWithSensors [
+  field SFVec3f    translation   -9.84 0.3 0.32
+  field SFRotation rotation      0 1 0 0
+  field SFString   name           "car"
+  field SFString   controller     "rl_hybrid_controller"
+  field SFBool     supervisor     TRUE
+]
+{
+  BmwX5 {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    controller IS controller
+    supervisor IS supervisor
+    extensionSlot [
+      # Передний лидар
+      DEF LIDAR_FRONT Lidar {
+        translation 2.0 1.2 0.0
+        rotation 0 1 0 0
+        name "lidar_front"
+        fieldOfView 3.14159
+        horizontalResolution 360
+        numberOfLayers 1
+        minRange 0.1
+        maxRange 30.0
+      }
+      # Левый лидар
+      DEF LIDAR_LEFT Lidar {
+        translation 0.5 1.2 -1.0
+        rotation 0 1 0 1.57
+        name "lidar_left"
+        fieldOfView 3.14159
+        horizontalResolution 360
+        numberOfLayers 1
+        minRange 0.1
+        maxRange 30.0
+      }
+      # Правый лидар
+      DEF LIDAR_RIGHT Lidar {
+        translation 0.5 1.2 1.0
+        rotation 0 1 0 -1.57
+        name "lidar_right"
+        fieldOfView 3.14159
+        horizontalResolution 360
+        numberOfLayers 1
+        minRange 0.1
+        maxRange 30.0
+      }
+      # GPS
+      DEF GPS GPS {
+        translation 0 0.5 0
+        name "gps"
+      }
+      # IMU
+      DEF IMU InertialUnit {
+        translation 0 0.5 0
+        name "imu"
+      }
+      # Компас
+      DEF COMPASS Compass {
+        translation 0 0.5 0
+        name "compass"
+      }
+    ]
+  }
+}
