@@ -55,10 +55,9 @@ RL-агент (алгоритм PPO / SAC)
 ## 📁 Структура проекта
 text
 OFFRoad_Net/
+
 ├── PPO/                      # Контроллеры с алгоритмом PPO
-
 │   ├── controllers/          # Python-скрипты для Webots
-
 │   ├── worlds/               # World-файлы Webots
 
 │   ├── protos/               # Прототипы объектов (деревья, камни)
