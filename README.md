@@ -56,7 +56,7 @@ OFFRoad_Net/
 ├── requirements.txt          # Зависимости Python  
 └── README.md                 # Описание проекта  
 
-##🛠️ Используемые технологии  
+## 🛠️ Используемые технологии  
 | Технология | Назначение |
 |----------|---------|
 | Webots | Симуляция физики и робототехники   |
@@ -69,24 +69,28 @@ OFFRoad_Net/
 ## 🚀 Запуск проекта
 
 ### 1. Клонирование репозитория
-
 ```bash
 git clone https://github.com/Pirtis/OFFRoad_Net.git
 cd OFFRoad_Net
-2. Создание виртуального окружения
-bash
+```
+### 2. Создание виртуального окружения
+```
 python -m venv venv
 source venv/bin/activate      # Linux/Mac
 venv\Scripts\activate         # Windows
-3. Установка зависимостей
-bash
+```
+### 4. Установка зависимостей
+```
 pip install -r requirements.txt
-4. Запуск обучения
-bash
+```
+### 6. Запуск обучения
+```
 cd PPO/controllers/rl_controler_big
 python rl_controler_big.py
-5. Запуск тестирования обученной модели
+```
+### 7. Запуск тестирования обученной модели
 bash
+```
 python trained_rl.py --test
 ```
 
