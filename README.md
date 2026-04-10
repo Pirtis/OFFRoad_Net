@@ -56,12 +56,19 @@ RL-агент (алгоритм PPO / SAC)
 text
 OFFRoad_Net/
 ├── PPO/                      # Контроллеры с алгоритмом PPO
+
 │   ├── controllers/          # Python-скрипты для Webots
+
 │   ├── worlds/               # World-файлы Webots
+
 │   ├── protos/               # Прототипы объектов (деревья, камни)
+
 │   └── blender_meshes/       # 3D-модели из Blender
+
 ├── SAC/                      # Контроллеры с алгоритмом SAC
+
 ├── requirements.txt          # Зависимости Python
+
 └── README.md                 # Описание проекта
 
 ##🛠️ Используемые технологии
