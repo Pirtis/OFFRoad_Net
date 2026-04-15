@@ -1,0 +1,26 @@
+# Blender 5.1.0 MTL File: 'Дерево1.blend'
+# www.blender.org
+
+newmtl OakBark
+Ns 14.400002
+Ka 0.125000 0.125000 0.125000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd UltraQualityFirOptimized2_bark07_color_1.png
+map_Bump UltraQualityFirOptimized_bark07_normal_0.png
+
+newmtl OakBranchAtlas
+Ns 202.500000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Branch_COLOR0000_3.png
+map_Bump Branch_NORMAL0000_2.png
