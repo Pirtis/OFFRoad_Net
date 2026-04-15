@@ -16,13 +16,13 @@ PROTO Tree1 [
         scale IS treeScale
         children [
           CadShape {
-            url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Tree1.obj" ]
+            url [ "../../blender_meshes/Tree1.obj" ]
           }
         ]
       }
     ]
     boundingObject Mesh {
-      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Tree1.obj" ]
+      url [ "../../blender_meshes/Tree1.obj" ]
     }
   }
 }

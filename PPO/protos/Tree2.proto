@@ -16,7 +16,7 @@ PROTO Tree2 [
         scale IS treeScale
         children [
           CadShape {
-            url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Tree2.obj" ]
+            url [ "../../blender_meshes/Tree2.obj" ]
           }
         ]
       }
@@ -24,7 +24,7 @@ PROTO Tree2 [
     
     # boundingObject без Transform - Mesh напрямую
     boundingObject Mesh {
-      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Tree2.obj" ]
+      url [ "../../blender_meshes/Tree2.obj" ]
     }
   }
 }

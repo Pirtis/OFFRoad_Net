@@ -19,7 +19,7 @@ PROTO Road [
           Shape {
             appearance PBRAppearance {
               baseColorMap ImageTexture {
-                url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/dirtroad.jpg" ]
+                url [ "../../blender_meshes/dirtroad.jpg" ]
               }
               textureTransform TextureTransform {
                 scale 3 3
@@ -29,7 +29,7 @@ PROTO Road [
               metalness 0.0
             }
             geometry Mesh {
-              url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Road.obj" ]
+              url [ "../../blender_meshes/Road.obj" ]
             }
           }
         ]
@@ -38,7 +38,7 @@ PROTO Road [
     
     # А здесь проблема - boundingObject не масштабируется
     boundingObject Mesh {
-      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Road.obj" ]
+      url [ "../../blender_meshes/Road.obj" ]
     }
   }
 }

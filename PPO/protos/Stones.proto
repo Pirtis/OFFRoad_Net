@@ -16,14 +16,14 @@ PROTO Stones [
         scale IS stoneScale
         children [
           CadShape {
-            url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Stones.obj" ]
+            url [ "../../blender_meshes/Stones.obj" ]
           }
         ]
       }
     ]
     
     boundingObject Mesh {
-      url [ "D:/WeBots_Prodjects/Map_tree/blender_meshes/Stones.obj" ]
+      url [ "../../blender_meshes/Stones.obj" ]
     }
   }
 }
